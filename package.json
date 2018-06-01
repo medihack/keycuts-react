@@ -1,6 +1,6 @@
 {
   "name": "keycuts-react",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description":
     "A declarative React wrapper for KeyCuts, a modern keyboard shortcuts library.",
   "main": "dist/keycuts-react.js",
@@ -15,20 +15,20 @@
   "license": "MIT",
   "files": ["dist/", "src/", "README.md", "LICENSE"],
   "scripts": {
-    "build": "npm run eslint && npm run test && npm run webpack",
+    "build": "yarn eslint && yarn test && yarn webpack",
     "clean:coverage": "rimraf coverage/*",
     "clean:dist": "rimraf dist/*",
     "coverage": "jest --coverage",
-    "deploy": "git push origin master && npm publish",
-    "deploy:patch": "npm version patch && npm run deploy",
-    "deploy:minor": "npm version minor && npm run deploy",
-    "deploy:major": "npm version major && npm run deploy",
+    "deploy": "git push origin master && yarn publish",
+    "deploy:patch": "yarn version --patch && yarn deploy",
+    "deploy:minor": "yarn version --minor && yarn deploy",
+    "deploy:major": "yarn version --major && yarn deploy",
     "eslint": "eslint src/",
     "start": "webpack-dev-server --config ./config/webpack.dev.config.js",
     "test": "jest",
     "test:watch": "jest --watch",
     "webpack":
-      "npm run clean:dist && npm run webpack:dev && npm run webpack:prod",
+      "yarn clean:dist && yarn webpack:dev && yarn webpack:prod",
     "webpack:dev": "webpack --progress --config ./config/webpack.dev.config.js",
     "webpack:watch":
       "webpack --progress --watch --config ./config/webpack.dev.config.js",
