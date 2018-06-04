@@ -43,7 +43,6 @@ class KeyCuts extends Component {
       throw new Error('Invalid bind parameter value: ' + bindings)
 
     for (let binding of Object.entries(bindings)) {
-      console.log('here')
       const [shortcut, callback] = binding
       this.keys.bind(shortcut, callback)
     }

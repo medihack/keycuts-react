@@ -1,6 +1,6 @@
 # KeyCuts React
 
-KeyCuts-React is the React wrapper for [KeyCuts](https://medihack.github.io/keycuts/), a modern Javascript library for handling keyboard shortcuts.
+KeyCuts-React is the React wrapper for [KeyCuts](https://github.com/medihack/keycuts), a modern Javascript library for handling keyboard shortcuts.
 
 ## Installation
 
@@ -22,8 +22,8 @@ Alternatively you can [download the distributed library](https://unpkg.com/keycu
 ## Usage
 
 ```js
-// Import using ES6 modules syntax
-import { KeyCuts } from 'keycuts'
+// Import KeyCuts using ES6 modules syntax
+import KeyCuts from 'keycuts-react'
 
 // Include it in your component
 ...
@@ -33,6 +33,8 @@ render() {
 }
 ...
 ```
+
+If the `KeyCuts` element does not have any children it listens to key events of the `window` object. Otherwise it will just listen to events that are bubbling up from its children.
 
 ## Development
 
@@ -50,12 +52,12 @@ KeyCuts uses Webpack to transpile the source code (`src/`) into a minified and n
 $ npm run build
 ```
 
-Run the test suite (using Jest) once or automatically when a source or test file was changed.
+Run the test suite (using Jest) once or continously when a source or test file was changed.
 
 ```shell
 // Run all tests once
 $ npm run test
-// or contiously
+// or continously
 $ npm run test:watch
 ```
 
