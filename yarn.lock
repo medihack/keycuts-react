@@ -4738,9 +4738,9 @@ kebab-case@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/kebab-case/-/kebab-case-1.0.0.tgz#3f9e4990adcad0c686c0e701f7645868f75f91eb"
 
-keycuts@^0.1.6:
-  version "0.1.6"
-  resolved "https://registry.yarnpkg.com/keycuts/-/keycuts-0.1.6.tgz#53e7527e0c9ba832b591872681d9f276d8d65cef"
+keycuts@^0.2.1:
+  version "0.2.1"
+  resolved "https://registry.yarnpkg.com/keycuts/-/keycuts-0.2.1.tgz#10627c13b99acaf07ddc49f7fd00dff16d46978e"
 
 keyv@3.0.0:
   version "3.0.0"
