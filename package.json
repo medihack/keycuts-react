@@ -1,28 +1,18 @@
 {
   "name": "keycuts-react",
   "version": "0.1.2",
-  "description": "A declarative React wrapper for KeyCuts, a modern keyboard shortcuts library.",
+  "description":
+    "A declarative React wrapper for KeyCuts, a modern keyboard shortcuts library.",
   "main": "dist/keycuts-react.js",
   "unpkg": "dist/keycuts-react.min.js",
-  "module": "src/index.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/medihack/keycuts-react.git"
   },
-  "keywords": [
-    "shortcuts",
-    "keyboard",
-    "key",
-    "react"
-  ],
+  "keywords": ["shortcuts", "keyboard", "key", "react"],
   "author": "Kai Schlamp",
   "license": "MIT",
-  "files": [
-    "dist/",
-    "src/",
-    "README.md",
-    "LICENSE"
-  ],
+  "files": ["dist/", "src/", "README.md", "LICENSE"],
   "scripts": {
     "build": "yarn eslint && yarn test && yarn webpack",
     "clean:coverage": "rimraf coverage/*",
@@ -38,8 +28,10 @@
     "test:watch": "jest --watch",
     "webpack": "yarn clean:dist && yarn webpack:dev && yarn webpack:prod",
     "webpack:dev": "webpack --progress --config ./config/webpack.dev.config.js",
-    "webpack:watch": "webpack --progress --watch --config ./config/webpack.dev.config.js",
-    "webpack:prod": "webpack --progress --config ./config/webpack.prod.config.js"
+    "webpack:watch":
+      "webpack --progress --watch --config ./config/webpack.dev.config.js",
+    "webpack:prod":
+      "webpack --progress --config ./config/webpack.prod.config.js"
   },
   "dependencies": {
     "keycuts": "^0.1.6",
