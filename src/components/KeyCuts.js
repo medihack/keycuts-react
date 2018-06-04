@@ -5,7 +5,10 @@ import { Keys } from 'keycuts'
 class KeyCuts extends Component {
   componentDidMount() {
     const options = this.props.options
-    this.keys = new Keys(this._el, options)
+    const children = this.props.children
+
+    if (children) this.keys = new Keys(this._el, options)
+    else this.keys = new Keys(window, options)
 
     this.updateBindings()
     this.updateWatchers()
@@ -40,6 +43,7 @@ class KeyCuts extends Component {
       throw new Error('Invalid bind parameter value: ' + bindings)
 
     for (let binding of Object.entries(bindings)) {
+      console.log('here')
       const [shortcut, callback] = binding
       this.keys.bind(shortcut, callback)
     }
@@ -61,7 +65,21 @@ class KeyCuts extends Component {
   }
 
   render() {
-    return <div ref={el => (this._el = el)}>{this.props.children}</div>
+    // eslint-disable-next-line no-unused-vars
+    const { children, options, ...other } = this.props
+
+    if (children) {
+      // TODO: Switch from div to Fragment later on, but Fragments
+      // currently can't have event listeners attached.
+      // See https://github.com/facebook/react/issues/12051
+      return (
+        <div ref={el => (this._el = el)} {...other}>
+          {this.props.children}
+        </div>
+      )
+    }
+
+    return null
   }
 }
 
