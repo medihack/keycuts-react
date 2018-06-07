@@ -8,7 +8,7 @@ class KeyCuts extends Component {
     const children = this.props.children
 
     if (children) this.keys = new Keys(this._el, options)
-    else this.keys = new Keys(window, options)
+    else this.keys = new Keys(document, options)
 
     this.updateBindings()
     this.updateWatchers()
