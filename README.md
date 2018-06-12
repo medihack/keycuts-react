@@ -1,6 +1,6 @@
-# KeyCuts React
+# <img src="https://cdn.rawgit.com/medihack/keycuts-react/master/src/keycuts-react_logo_full.svg" height="100"></img>
 
-KeyCuts-React is the React wrapper for [KeyCuts](https://github.com/medihack/keycuts), a modern Javascript library for handling keyboard shortcuts.
+_keycuts-react_ is the React wrapper for [_keycuts_](https://github.com/medihack/keycuts), a modern Javascript library for handling keyboard shortcuts.
 
 ## Installation
 
@@ -12,7 +12,7 @@ $ npm install keycuts keycuts-react --save
 $ yarn add keycuts keycuts-react
 ```
 
-Alternatively you can [download the distributed library](https://unpkg.com/keycuts-react/dist/keycuts-react.min.js) and link it into your webpage below the keycuts library.
+Alternatively you can [download the distributed library](https://unpkg.com/keycuts-react/dist/keycuts-react.min.js) and link it into your webpage below the `keycuts` library.
 
 ```html
 <script src="keycuts.min.js"></script>
@@ -22,19 +22,19 @@ Alternatively you can [download the distributed library](https://unpkg.com/keycu
 ## Usage
 
 ```js
-// Import KeyCuts using ES6 modules syntax
-import KeyCuts from 'keycuts-react'
+// Import Keycuts using ES6 modules syntax
+import Keycuts from 'keycuts-react'
 
 // Include it in your component
 ...
 render() {
   return (
-    <KeyCuts bind={myBindings} watch={myWatchers} />
+    <Keycuts bind={myBindings} watch={myWatchers} />
 }
 ...
 ```
 
-If the `KeyCuts` element does not have any children it listens to key events of the `window` object. Otherwise it will just listen to events that are bubbling up from its children.
+If the `Keycuts` element does not have any children it listens to key events of the `window` object. Otherwise it will just listen to events that are bubbling up from its children.
 
 ## Development
 
@@ -46,7 +46,7 @@ $ cd keycuts-react
 $ npm install # or yarn install
 ```
 
-KeyCuts uses Webpack to transpile the source code (`src/`) into a minified and non-minified bundle in the `dist/` folder.
+_keycuts-react_ uses Webpack to transpile the source code (`src/`) into a minified and non-minified bundle in the `dist/` folder.
 
 ```shell
 $ npm run build
