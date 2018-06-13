@@ -1,6 +1,6 @@
 {
   "name": "keycuts-react",
-  "version": "0.3.1",
+  "version": "0.4.0",
   "description": "A declarative React wrapper for keycuts, a modern keyboard shortcuts library.",
   "main": "dist/keycuts-react.js",
   "unpkg": "dist/keycuts-react.min.js",
