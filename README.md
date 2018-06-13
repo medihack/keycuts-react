@@ -22,7 +22,7 @@ Alternatively you can [download the distributed library](https://unpkg.com/keycu
 ## Usage
 
 ```js
-// Import Keycuts using ES6 modules syntax
+// Import using ES6 modules syntax
 import Keycuts from 'keycuts-react'
 
 // Include it in your component

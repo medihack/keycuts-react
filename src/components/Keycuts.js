@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { Keys } from 'keycuts'
 
-class KeyCuts extends Component {
+class Keycuts extends Component {
   componentDidMount() {
     const options = this.props.options
     const children = this.props.children
@@ -82,7 +82,7 @@ class KeyCuts extends Component {
   }
 }
 
-KeyCuts.propTypes = {
+Keycuts.propTypes = {
   children: PropTypes.element,
   options: PropTypes.object,
   bind: PropTypes.object,
@@ -90,4 +90,4 @@ KeyCuts.propTypes = {
   paused: PropTypes.bool
 }
 
-export default KeyCuts
+export default Keycuts

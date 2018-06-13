@@ -3,24 +3,24 @@
 import React from 'react'
 import renderer from 'react-test-renderer'
 
-import KeyCuts from './KeyCuts'
+import Keycuts from './Keycuts'
 
 describe('Keycuts without children', () => {
   test('should be created successfully', () => {
-    const component = renderer.create(<KeyCuts />)
+    const component = renderer.create(<Keycuts />)
     const tree = component.toJSON()
     expect(tree).toMatchSnapshot()
   })
 
   test('should have an attached keys object', () => {
-    const component = renderer.create(<KeyCuts />)
+    const component = renderer.create(<Keycuts />)
     const keys = component.getInstance().keys
     expect(keys).not.toBeNull()
   })
 
   test('should bind handler', () => {
     const component = renderer.create(
-      <KeyCuts
+      <Keycuts
         bind={{
           'a + b': () => {}
         }}
@@ -31,7 +31,7 @@ describe('Keycuts without children', () => {
   })
 
   test('should add watcher', () => {
-    const component = renderer.create(<KeyCuts watch={[() => {}]} />)
+    const component = renderer.create(<Keycuts watch={[() => {}]} />)
     const keys = component.getInstance().keys
     expect(keys._watchers.length).toBe(1)
   })
@@ -40,9 +40,9 @@ describe('Keycuts without children', () => {
 describe('Keycuts without children', () => {
   test('should be created successfully', () => {
     const component = renderer.create(
-      <KeyCuts>
+      <Keycuts>
         <input />
-      </KeyCuts>
+      </Keycuts>
     )
     const tree = component.toJSON()
     expect(tree).toMatchSnapshot()

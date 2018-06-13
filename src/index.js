@@ -1,1 +1,1 @@
-export { default } from './components/KeyCuts'
+export { default } from './components/Keycuts'
